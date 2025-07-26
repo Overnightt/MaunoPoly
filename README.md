@@ -19,4 +19,4 @@ Ce projet a pour but de recréer le célèbre jeu de société **Monopoly** sous
 - **HTML** – Structure du site et du plateau de jeu
 - **CSS** – Style et mise en page du plateau, animations simples
 - **JavaScript (Vanilla)** – Logique du jeu, interactions utilisateur
-- **SQL** – Stockage des données (via un serveur local ou en ligne
+- **SQL/PHP** – Stockage des données (via un serveur en ligne)
