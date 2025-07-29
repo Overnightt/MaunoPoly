@@ -7,7 +7,7 @@ $conn = new mysqli ("sql112.infinityfree.com","if0_39565548","23ubIau4FKcAK", "i
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST["username"];
     $password = $_POST["pwd"];
-    $stmt = $conn->prepare("SELECT * FROM maunopoly WHERE username = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT * FROM joueurs WHERE username = ? AND password = ?");
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
