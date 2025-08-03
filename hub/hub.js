@@ -1,3 +1,4 @@
+fetch("chercherpartie.php")
   .then(response => response.json())
   .then(data => {
     const ListeDiv = document.getElementById("liste");
@@ -5,5 +6,12 @@
       const newGame = document.createElement("div");
       newGame.textContent = "Partie #" + game.id_partie + " — Host: " + game.host + " — " + game.joueurs_actuel + " joueur(s)";
       ListeDiv.appendChild(newGame);
+      const Button = document.createElement("button");
+      Button.textContent = "Join";
+      newGame.appendChild(Button);
+      Button.addEventListener("click", () => {
+        window.location.href = "saloon.html";
+        });
     });
   });
+
