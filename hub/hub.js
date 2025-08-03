@@ -10,8 +10,19 @@ fetch("chercherpartie.php")
       Button.textContent = "Join";
       newGame.appendChild(Button);
       Button.addEventListener("click", () => {
-        window.location.href = "saloon.html";
+        fetch("rejoindrepartie.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            id_partie: game.id_partie
+          })
+        })
+        .then(() => {
+          window.location.href = "saloon.html";
         });
+      });
     });
   });
 
