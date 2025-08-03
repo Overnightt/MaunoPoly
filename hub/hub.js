@@ -4,7 +4,7 @@ fetch("chercherpartie.php")
     const ListeDiv = document.getElementById("liste");
     data.forEach(game => {
       const newGame = document.createElement("div");
-      newGame.textContent = "Partie #" + game.id_partie + " — Host: " + game.host + " — " + game.joueurs_actuel + " joueur(s)";
+      newGame.textContent = "Partie #" + game.id_partie + " — Host: " + game.host + " — " + game.joueurs_actuel + " joueurs";
       ListeDiv.appendChild(newGame);
       const Button = document.createElement("button");
       Button.textContent = "Join";
@@ -25,4 +25,5 @@ fetch("chercherpartie.php")
       });
     });
   });
+
 
