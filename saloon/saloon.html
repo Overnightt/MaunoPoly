@@ -1,8 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <link rel="stylesheet" href="placeholder.css" />
-        <title>Saloon</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Saloon</title>
+  <link rel="stylesheet" href="saloon.css" />
+</head>
 <body>
-  <h1>Saloon</h1>
+  <h1>Salle d'attente</h1>
+
+  <div id="joueurs">
+    <h2>Joueurs dans la partie :</h2>
+    <ul id="liste-joueurs"></ul>
+  </div>
+
+  <div id="actions">
+    <button id="start-btn" style="display: none;">Commencer la partie</button>
+  </div>
+
+  <script src="saloon.js" defer></script>
+</body>
+</html>
