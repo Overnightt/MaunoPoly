@@ -6,6 +6,7 @@ session_start();
 $conn = new mysqli("sql112.infinityfree.com", "if0_39565548", "23ubIau4FKcAK", "if0_39565548_maunoply");
 $input = json_decode(file_get_contents('php://input'), true);
 $id_partie = $input['id_partie'];
+$_SESSION['id_partie'] = $id_partie;
 $host = $_SESSION['user'];
 $res = $conn->query("SELECT player_id FROM joueurs WHERE username = '$host'");
 $row = $res->fetch_assoc();
@@ -17,3 +18,4 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 ?>
+
