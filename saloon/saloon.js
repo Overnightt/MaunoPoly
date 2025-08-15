@@ -1,15 +1,16 @@
 function updateListejoueur() {
-fetch("chercherjouer.php")
+fetch("chercherjoueur.php")
     .then(response => response.json())
         .then(data => {
             const playerListDiv = document.getElementById("liste-joueurs");
             playerListDiv.innerHTML = "";
-            data.forEach(player => {
-                const p = document.createElement("p");
-                p.textContent = player.username; 
-                playerListDiv.appendChild(p);
+            data.forEach(username => {
+                const li = document.createElement("li");
+                li.textContent = username; 
+                playerListDiv.appendChild(li);
             });
         });
 }
 updateListejoueur();
 setInterval(updateListejoueur, 2000);
+
