@@ -11,6 +11,22 @@ fetch("chercherjoueur.php")
             });
         });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const startBtn = document.getElementById("start-btn");
+    if (startBtn) { 
+        startBtn.addEventListener("click", () => {
+            fetch("commencerpartie.php", { method: "POST" })
+                .then(response => response.text())
+                .then(res => {
+                    if (res === "ok") {
+                        window.location.href = "game.html";
+                    } 
+                })
+        });
+    }
+});
 updateListejoueur();
 setInterval(updateListejoueur, 2000);
+
 
