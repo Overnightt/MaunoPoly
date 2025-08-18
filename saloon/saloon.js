@@ -12,6 +12,16 @@ fetch("chercherjoueur.php")
         });
 }
 
+function checkPartie() {
+    fetch("checkstatut.php")
+        .then(response => response.text())
+        .then(statut => {
+            if (statut === "en-cours") {
+                window.location.href = "game.html"; 
+            }
+        });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const startBtn = document.getElementById("start-btn");
     if (startBtn) { 
@@ -27,6 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 updateListejoueur();
+checkPartie();
+setInterval(checkPartie, 2000);
 setInterval(updateListejoueur, 2000);
-
-
