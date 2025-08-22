@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ssi", $host, $statut, $joueurs);
     $stmt->execute();
     $id_partie = $conn->insert_id;
+    $_SESSION['id_partie'] = $id_partie;
     $stmt->close();
     $res = $conn->query("SELECT player_id FROM joueurs WHERE username = '$host'");
     $row = $res->fetch_assoc();
@@ -22,3 +23,4 @@ $conn->close();
 header("Location: saloon.html");
 exit;
 ?>
+
