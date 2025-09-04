@@ -2,7 +2,6 @@ import "./App.css"
 import { useState } from 'react';
 
 const Game = () => {
-const Game = () => {
     const propriétés = [
         { id: 1, name: "Boulevard de Belleville", style: { top: "86%", left: "79%", width: "8.4%", height: "13%" } },
         { id: 2, name: "Caissecom1", style: { top: "86%", left: "70.5%", width: "8.4%", height: "13%" } },
@@ -45,6 +44,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
