@@ -2,6 +2,7 @@ import "./App.css"
 import { useState } from 'react';
 
 const Game = () => {
+const Game = () => {
     const propriétés = [
         { id: 1, name: "Boulevard de Belleville", style: { top: "86%", left: "79%", width: "8.4%", height: "13%" } },
         { id: 2, name: "Caissecom1", style: { top: "86%", left: "70.5%", width: "8.4%", height: "13%" } },
@@ -20,7 +21,16 @@ const Game = () => {
         { id: 15, name: "Avenue Mozart", style: { top: "37%", left: "0%", width: "13%", height: "8%" } },
         { id: 16, name: "Caissecom2", style: { top: "29%", left: "0%", width: "13%", height: "8%" } },
         { id: 17, name: "Boulevard Saint-Michel", style: { top: "21%", left: "0%", width: "13%", height: "8%" } },
-        { id: 18, name: "Place Pigalle", style: { top: "13%", left: "0%", width: "13%", height: "8%" } },        
+        { id: 18, name: "Place Pigalle", style: { top: "13%", left: "0%", width: "13%", height: "8%" } },
+        { id: 19, name: "Avenue Matignon", style: { top: "0%", left: "13%", width: "8%", height: "13%" } },
+        { id: 20, name: "Chance2", style: { top: "0%", left: "21%", width: "8%", height: "13%" } },
+        { id: 21, name: "Boulevard Malsherbes", style: { top: "0%", left: "29.5%", width: "8%", height: "13%" } },
+        { id: 22, name: "Boulevard Henri-Martin", style: { top: "0%", left: "38%", width: "8%", height: "13%" } },
+        { id: 23, name: "Gare du Nord", style: { top: "0%", left: "46%", width: "8%", height: "13%" } },
+        { id: 24, name: "Faubourg Saint-Honoré", style: { top: "0%", left: "54%", width: "8%", height: "13%" } },
+        { id: 25, name: "Place de la Bourse", style: { top: "0%", left: "62.5%", width: "8%", height: "13%" } },
+        { id: 26, name: "Compagnie de Distribution des Eaux", style: { top: "0%", left: "71%", width: "8%", height: "13%" } },
+        { id: 27, name: "Rue La Fayette", style: { top: "0%", left: "79%", width: "8%", height: "13%" } },                 
       ];
     return (
             <div className="Plat0">
@@ -35,6 +45,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
