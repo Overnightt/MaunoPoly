@@ -9,9 +9,18 @@ const Game = () => {
         { id: 4, name: "Impot sur le revenu", style: { top: "86%", left: "54%", width: "8.4%", height: "13%" } },
         { id: 5, name: "Gare Montparnasse", style: { top: "86%", left: "46%", width: "8.4%", height: "13%" } },
         { id: 6, name: "Rue de Vaugirard", style: { top: "86%", left: "37.5%", width: "8.4%", height: "13%" } },
-        { id: 7, name: "Chance1", style: { top: "86%", left: "29,6%", width: "8.4%", height: "13%" } },
+        { id: 7, name: "Chance1", style: { top: "86%", left: "29%", width: "8.4%", height: "13%" } },
         { id: 8, name: "Rue de Courcelles", style: { top: "86%", left: "21.3%", width: "8.4%", height: "13%" } },
         { id: 9, name: "Avenue de la Republique", style: { top: "86%", left: "13%", width: "8.4%", height: "13%" } },
+        { id: 10, name: "Boulevard de la Villette", style: { top: "78%", left: "0%", width: "13%", height: "8%" } },
+        { id: 11, name: "Compagnie de Distribution d'Électricité", style: { top: "70%", left: "0%", width: "13%", height: "8%" } },
+        { id: 12, name: "Avenue de Neuilly", style: { top: "62%", left: "0%", width: "13%", height: "8%" } },
+        { id: 13, name: "Rue de Paradis", style: { top: "54%", left: "0%", width: "13%", height: "8%" } },
+        { id: 14, name: "Gare de Lyon", style: { top: "45.5%", left: "0%", width: "13%", height: "8%" } },
+        { id: 15, name: "Avenue Mozart", style: { top: "37%", left: "0%", width: "13%", height: "8%" } },
+        { id: 16, name: "Caissecom2", style: { top: "29%", left: "0%", width: "13%", height: "8%" } },
+        { id: 17, name: "Boulevard Saint-Michel", style: { top: "21%", left: "0%", width: "13%", height: "8%" } },
+        { id: 18, name: "Place Pigalle", style: { top: "13%", left: "0%", width: "13%", height: "8%" } },        
       ];
     return (
             <div className="Plat0">
@@ -26,6 +35,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
