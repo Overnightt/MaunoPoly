@@ -41,8 +41,18 @@
   color: #888;
 }
 
+.Plat0 {
+  position: relative;
+}
+
 .plateau {
   max-width: 100%;        
   max-height: 90vh;      
   object-fit: contain;    
+}
+
+.zone-propriétés {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(255,0,0,0.3);
 }
