@@ -29,7 +29,16 @@ const Game = () => {
         { id: 24, name: "Faubourg Saint-Honoré", style: { top: "0%", left: "54%", width: "8%", height: "13%" } },
         { id: 25, name: "Place de la Bourse", style: { top: "0%", left: "62.5%", width: "8%", height: "13%" } },
         { id: 26, name: "Compagnie de Distribution des Eaux", style: { top: "0%", left: "71%", width: "8%", height: "13%" } },
-        { id: 27, name: "Rue La Fayette", style: { top: "0%", left: "79%", width: "8%", height: "13%" } },                 
+        { id: 27, name: "Rue La Fayette", style: { top: "0%", left: "79%", width: "8%", height: "13%" } },
+        { id: 28, name: "Avenue de Breteuil", style: { top: "13%", left: "87%", width: "13%", height: "8%" } },
+        { id: 29, name: "Avenue Foch", style: { top: "21%", left: "87%", width: "13%", height: "8%" } },
+        { id: 30, name: "Caissecom3", style: { top: "29%", left: "87%", width: "13%", height: "8%" } },
+        { id: 31, name: "Boulevard des Capucines", style: { top: "37%", left: "87%", width: "13%", height: "8%" } },
+        { id: 32, name: "Gare Saint-Lazare", style: { top: "45.5%", left: "87%", width: "13%", height: "8%" } },
+        { id: 33, name: "Chance3", style: { top: "53.5%", left: "87%", width: "13%", height: "8%" } },
+        { id: 34, name: "Avenue des Champs-Élysées", style: { top: "62%", left: "87%", width: "13%", height: "8%" } },
+        { id: 35, name: "Taxe de luxe", style: { top: "70%", left: "87%", width: "13%", height: "8%" } },
+        { id: 36, name: "Rue de la Paix", style: { top: "78.5%", left: "87%", width: "13%", height: "8%" } },
       ];
     return (
             <div className="Plat0">
@@ -44,6 +53,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
