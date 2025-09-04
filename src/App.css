@@ -54,5 +54,9 @@
 .zone-propriétés {
   position: absolute;
   cursor: pointer;
-  background-color: rgba(255,0,0,0.3);
+  border: 2px solid transparent;
+}
+
+.zone-propriétés:hover {
+  border: 2px solid rgba(173,216,230,1);
 }
