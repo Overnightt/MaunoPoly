@@ -60,3 +60,12 @@
 .zone-propriétés:hover {
   border: 2px solid rgba(173,216,230,1);
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
