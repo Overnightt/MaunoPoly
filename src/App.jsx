@@ -2,10 +2,11 @@ import "./App.css"
 import { useState } from 'react';
 
 const Game = () => {
+    const [Carte_selec, setCarte_selec] = useState(null);
     const propriétés = [
-        { id: 1, name: "Boulevard de Belleville", style: { top: "86%", left: "79%", width: "8%", height: "13%" } },
+        { id: 1, name: "Boulevard de Belleville", style: { top: "86%", left: "79%", width: "8%", height: "13%" }, img: "/Propriétés/Boulevard_de_belleville.png" },
         { id: 2, name: "Caissecom1", style: { top: "86%", left: "70.5%", width: "8%", height: "13%" } },
-        { id: 3, name: "Rue Lecourbe", style: { top: "86%", left: "62%", width: "8%", height: "13%" } },
+        { id: 3, name: "Rue Lecourbe", style: { top: "86%", left: "62%", width: "8%", height: "13%" } , img: "/Propriétés/Rue_lecourbe.png" },
         { id: 4, name: "Impot sur le revenu", style: { top: "86%", left: "54%", width: "8%", height: "13%" } },
         { id: 5, name: "Gare Montparnasse", style: { top: "86%", left: "46%", width: "8%", height: "13%" } },
         { id: 6, name: "Rue de Vaugirard", style: { top: "86%", left: "37.5%", width: "8%", height: "13%" } },
@@ -47,12 +48,19 @@ const Game = () => {
                 </audio>
                 <img className="plateau" src="plateau.jpg"/>
                 {propriétés.map((p) => (
-                    <div key={p.id} className="zone-propriétés" style={p.style} onClick={()=> alert(`You clicked on ${p.name}`)} />
+                    <div key={p.id} className="zone-propriétés" style={p.style} onClick={()=> setCarte_selec(p.img)} />
                 ))}
+                
+                {Carte_selec &&(
+                    <div className="overlay" onClick= {()=> setCarte_selec(null)}>
+                        <img src={Carte_selec} className="popup"/>
+                    </div>
+                )}
             </div>
     );
 }
 export default Game;
+
 
 
 
