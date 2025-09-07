@@ -31,15 +31,15 @@ const Game = () => {
         { id: 25, name: "Place de la Bourse", style: { top: "0%", left: "62.3%", width: "8%", height: "13%" }, img: "/Propriétés/Place_de_la_bourse.png" },
         { id: 26, name: "Compagnie de Distribution des Eaux", style: { top: "0%", left: "70.5%", width: "8%", height: "13%" }, img: "/Propriétés/Compagnie_eaux.png" },
         { id: 27, name: "Rue La Fayette", style: { top: "0%", left: "78.6%", width: "8%", height: "13%" }, img: "/Propriétés/Rue_la_fayette.png" },
-        { id: 28, name: "Avenue de Breteuil", style: { top: "12.7%", left: "87%", width: "12.7%", height: "8%" } },
-        { id: 29, name: "Avenue Foch", style: { top: "21%", left: "87%", width: "12.7%", height: "8%" } },
+        { id: 28, name: "Avenue de Breteuil", style: { top: "12.7%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Avenue_de_breteuil.png" },
+        { id: 29, name: "Avenue Foch", style: { top: "21%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Avenue_foch.png" },
         { id: 30, name: "Caissecom3", style: { top: "29%", left: "87%", width: "12.7%", height: "8%" } },
-        { id: 31, name: "Boulevard des Capucines", style: { top: "37%", left: "87%", width: "12.7%", height: "8%" } },
+        { id: 31, name: "Boulevard des Capucines", style: { top: "37%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Boulevard_des_capucines.png" },
         { id: 32, name: "Gare Saint-Lazare", style: { top: "45.5%", left: "87%", width: "12.7%", height: "8%" },img: "/Propriétés/Gare_saint-lazare.png" },
         { id: 33, name: "Chance3", style: { top: "53.5%", left: "87%", width: "12.7%", height: "8%" } },
-        { id: 34, name: "Avenue des Champs-Élysées", style: { top: "61.7%", left: "87%", width: "12.7%", height: "8%" } },
+        { id: 34, name: "Avenue des Champs-Élysées", style: { top: "61.7%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Avenue_des_champs-élysées.png" },
         { id: 35, name: "Taxe de luxe", style: { top: "69.8%", left: "87%", width: "12.7%", height: "8%" } },
-        { id: 36, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" } },
+        { id: 36, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Rue_de_la_paix.png" },
       ];
     return (
             <div className="Plat0">
@@ -60,6 +60,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
