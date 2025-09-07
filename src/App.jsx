@@ -14,7 +14,7 @@ const Game = () => {
         { id: 8, name: "Rue de Courcelles", style: { top: "86%", left: "21.3%", width: "8%", height: "13%" }, img: "/Propriétés/Rue_de_courcelles.png" },
         { id: 9, name: "Avenue de la Republique", style: { top: "86%", left: "13%", width: "8%", height: "13%" }, img: "/Propriétés/Avenue_de_la_republique.png" },
         { id: 10, name: "Boulevard de la Villette", style: { top: "78%", left: "0%", width: "13%", height: "8%" }, img: "/Propriétés/Boulevard_de_la_villette.png" },
-        { id: 11, name: "Compagnie de Distribution d'Électricité", style: { top: "70%", left: "0%", width: "13%", height: "8%" } },
+        { id: 11, name: "Compagnie de Distribution d'Électricité", style: { top: "70%", left: "0%", width: "13%", height: "8%" }, img: "/Propriétés/Compagnie_élec.png"  },
         { id: 12, name: "Avenue de Neuilly", style: { top: "61.5%", left: "0%", width: "13%", height: "8%" }, img: "/Propriétés/Avenue_de_neuilly.png" },
         { id: 13, name: "Rue de Paradis", style: { top: "53.5%", left: "0%", width: "13%", height: "8%" }, img: "/Propriétés/Rue_de_paradis.png" },
         { id: 14, name: "Gare de Lyon", style: { top: "45.5%", left: "0%", width: "13%", height: "8%" }, img: "/Propriétés/Gare_de_lyon.png" },
@@ -29,7 +29,7 @@ const Game = () => {
         { id: 23, name: "Gare du Nord", style: { top: "0%", left: "45.7%", width: "8%", height: "13%" },img: "/Propriétés/Gare_du_nord.png" },
         { id: 24, name: "Faubourg Saint-Honoré", style: { top: "0%", left: "54%", width: "8%", height: "13%" }, img: "/Propriétés/Faubourg_saint-honoré.png" },
         { id: 25, name: "Place de la Bourse", style: { top: "0%", left: "62.3%", width: "8%", height: "13%" }, img: "/Propriétés/Place_de_la_bourse.png" },
-        { id: 26, name: "Compagnie de Distribution des Eaux", style: { top: "0%", left: "70.5%", width: "8%", height: "13%" } },
+        { id: 26, name: "Compagnie de Distribution des Eaux", style: { top: "0%", left: "70.5%", width: "8%", height: "13%" }, img: "/Propriétés/Compagnie_eaux.png" },
         { id: 27, name: "Rue La Fayette", style: { top: "0%", left: "78.6%", width: "8%", height: "13%" }, img: "/Propriétés/Rue_la_fayette.png" },
         { id: 28, name: "Avenue de Breteuil", style: { top: "12.7%", left: "87%", width: "12.7%", height: "8%" } },
         { id: 29, name: "Avenue Foch", style: { top: "21%", left: "87%", width: "12.7%", height: "8%" } },
@@ -60,6 +60,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
