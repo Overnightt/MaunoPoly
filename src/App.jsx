@@ -47,6 +47,7 @@ const Game = () => {
                     <source src="/OST_Maunopoly.mp3" type="audio/mpeg" />
                 </audio>
                 <img className="plateau" src="plateau.jpg"/>
+                
                 {propriétés.map((p) => (
                     <div key={p.id} className="zone-propriétés" style={p.style} onClick={()=> setCarte_selec(p.img)} />
                 ))}
@@ -56,10 +57,15 @@ const Game = () => {
                         <img src={Carte_selec} className="popup"/>
                     </div>
                 )}
+
+                <div className="Sidebar-gauche">
+
+                </div>
             </div>
     );
 }
 export default Game;
+
 
 
 
