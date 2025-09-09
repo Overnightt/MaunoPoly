@@ -41,6 +41,10 @@ const Game = () => {
         { id: 35, name: "Taxe de luxe", style: { top: "69.8%", left: "87%", width: "12.7%", height: "8%" } },
         { id: 36, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Rue_de_la_paix.png" },
       ];
+     const joueurs = [
+        {id: 1, name: "Adrien", argent: 1500, piece: "👨‍💼"},
+        {id: 2, name: "Mathéo", argent: 1500, piece: "🎩"},
+      ];
     return (
             <div className="Plat0">
                 <audio autoPlay loop>
@@ -59,12 +63,18 @@ const Game = () => {
                 )}
 
                 <div className="Sidebar-gauche">
-
+                    {joueurs.map((j) => (
+                        <div key={j.id} className="joueurs" >
+                            <span className="Nom">j.name</span>
+                            <span className="argent">j.argent €</span>
+                        </div>
+                    ))}
                 </div>
             </div>
     );
 }
 export default Game;
+
 
 
 
