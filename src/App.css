@@ -68,6 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .Sidebar-gauche {
@@ -80,4 +81,5 @@
   box-sizing: border-box;
   background-color: rgba(43, 41, 41, 0.950);
   border-radius: 10px; 
+  z-index: 1;
 }
