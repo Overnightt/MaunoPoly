@@ -65,8 +65,8 @@ const Game = () => {
                 <div className="Sidebar-gauche">
                     {joueurs.map((j) => (
                         <div key={j.id} className="joueurs" >
-                            <span className="Nom">j.name</span>
-                            <span className="argent">j.argent €</span>
+                            <span className="Nom">{j.name}</span>
+                            <span className="argent">{j.argent} €</span>
                         </div>
                     ))}
                 </div>
@@ -74,6 +74,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
