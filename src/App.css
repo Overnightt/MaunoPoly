@@ -98,3 +98,13 @@
   border-radius: 5px;   
   font-weight: bold;
 }
+
+.joueurs_actif{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 2px white;
+}
