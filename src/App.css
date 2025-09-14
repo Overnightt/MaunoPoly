@@ -108,3 +108,32 @@
   border-radius: 8px;
   box-shadow: 0 0 10px 2px white;
 }
+
+.Sidebar-droite {
+  position: fixed;
+  top: 5vh;
+  left: 72.5vw;
+  width: 26vw;
+  height: 94vh;
+  border: 2px solid rgba(255, 253, 253, 0.856);
+  box-sizing: border-box;
+  background-color: rgba(43, 41, 41, 0.950);
+  border-radius: 10px; 
+  z-index: 1;
+}
+
+.Endturn {
+  position: absolute;
+  top: 83vh;
+  left: 33%;
+  color: white;
+  background-color: darkred;
+  cursor: pointer;
+  font-weight: bold;
+  transition: box-shadow 0.2 ease;
+  border: none;
+}
+
+.Endturn:hover {
+  box-shadow: 0 0 15px white;
+}
