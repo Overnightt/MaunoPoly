@@ -41,9 +41,9 @@ const Game = () => {
         { id: 35, name: "Taxe de luxe", style: { top: "69.8%", left: "87%", width: "12.7%", height: "8%" } },
         { id: 36, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Rue_de_la_paix.png" },
       ];
-     const joueurs = [
-        {id: 1, name: "Adrien", argent: 1500, piece: "👨‍💼"},
-        {id: 2, name: "Mathéo", argent: 1500, piece: "🎩"},
+      const joueurs = [
+        {id: 1, name: "Adrien", argent: 1500, piece: "👨‍💼", isTurn: 1, position:0, isJail:0},
+        {id: 2, name: "Mathéo", argent: 1500, piece: "🎩", isTurn:0, position:0, isJail:0},
       ];
     return (
             <div className="Plat0">
@@ -51,7 +51,7 @@ const Game = () => {
                     <source src="/OST_Maunopoly.mp3" type="audio/mpeg" />
                 </audio>
                 <img className="plateau" src="plateau.jpg"/>
-                
+
                 {propriétés.map((p) => (
                     <div key={p.id} className="zone-propriétés" style={p.style} onClick={()=> setCarte_selec(p.img)} />
                 ))}
@@ -64,7 +64,7 @@ const Game = () => {
 
                 <div className="Sidebar-gauche">
                     {joueurs.map((j) => (
-                        <div key={j.id} className="joueurs" >
+                        <div key={j.id} className={`joueurs_${j.isTurn === 1 ? "actif" : ""}`} >
                             <span className="Nom">{j.name}</span>
                             <span className="argent">{j.argent} €</span>
                         </div>
@@ -74,6 +74,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
