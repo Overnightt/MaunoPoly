@@ -84,7 +84,7 @@
   z-index: 1;
 }
 
-.joueurs {
+.joueurs_ {
   display: flex;
   justify-content: space-between; 
   align-items: center;            
