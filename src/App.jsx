@@ -70,10 +70,14 @@ const Game = () => {
                         </div>
                     ))}
                 </div>
+                <div className="Sidebar-droite">
+                    <button className="Endturn">Finir le tour</button>
+                </div>
             </div>
     );
 }
 export default Game;
+
 
 
 
