@@ -40,11 +40,16 @@ const Game = () => {
         { id: 34, name: "Avenue des Champs-Élysées", style: { top: "61.7%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Avenue_des_champs-élysées.png" },
         { id: 35, name: "Taxe de luxe", style: { top: "69.8%", left: "87%", width: "12.7%", height: "8%" } },
         { id: 36, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Rue_de_la_paix.png" },
-      ];
-      const joueurs = [
-        {id: 1, name: "Adrien", argent: 1500, piece: "👨‍💼", isTurn: 1, position:0, isJail:0},
-        {id: 2, name: "Mathéo", argent: 1500, piece: "🎩", isTurn:0, position:0, isJail:0},
-      ];
+    ];
+    const Endturn = () => {
+        setjoueurs((joueur) => {
+            const indexTurn = joueur.findIndex((j) => j.isTurn===1)
+            return joueur.map((j,index) => {
+                if (index === indexTurn) return {...j , isTurn: 0};
+                if (index === indexTurn+1 %joueur.length)  return {...j , isTurn: 1};
+            });
+        });
+    };
     return (
             <div className="Plat0">
                 <audio autoPlay loop>
@@ -71,12 +76,13 @@ const Game = () => {
                     ))}
                 </div>
                 <div className="Sidebar-droite">
-                    <button className="Endturn">Finir le tour</button>
+                    <button className="Endturn" onClick={Endturn} >Finir le tour</button>
                 </div>
             </div>
     );
 }
 export default Game;
+
 
 
 
