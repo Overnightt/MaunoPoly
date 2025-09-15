@@ -40,13 +40,18 @@ const Game = () => {
         { id: 34, name: "Avenue des Champs-Élysées", style: { top: "61.7%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Avenue_des_champs-élysées.png" },
         { id: 35, name: "Taxe de luxe", style: { top: "69.8%", left: "87%", width: "12.7%", height: "8%" } },
         { id: 36, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Rue_de_la_paix.png" },
-    ];
+      ];
+      const [joueurs, setjoueurs] = useState ([
+        {id: 0, name: "Adrien", argent: 1500, piece: "👨‍💼", isTurn: 1, position:0, isJail:0},
+        {id: 1, name: "Mathéo", argent: 1500, piece: "🎩", isTurn:0, position:0, isJail:0},
+      ]);
     const Endturn = () => {
         setjoueurs((joueur) => {
             const indexTurn = joueur.findIndex((j) => j.isTurn===1)
+            const NindexTurn = (indexTurn +1) %joueur.length
             return joueur.map((j,index) => {
                 if (index === indexTurn) return {...j , isTurn: 0};
-                if (index === indexTurn+1 %joueur.length)  return {...j , isTurn: 1};
+                if (index === NindexTurn)  return {...j , isTurn: 1};
             });
         });
     };
@@ -82,6 +87,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
