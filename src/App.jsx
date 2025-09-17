@@ -59,6 +59,16 @@ const Game = () => {
             });
         });
     };
+    const pion = () => {
+        propriétés.map((p) => {
+            joueur.map((j) => {
+                if (j.position === p.id) {
+                    <span style={{postion: absolute, top: propriétés.top, left: propriétés.left}} > {j.piece}  </span>
+                };
+            });
+
+        });
+    };
     return (
             <div className="Plat0">
                 <audio autoPlay loop>
@@ -91,6 +101,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
