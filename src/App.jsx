@@ -46,7 +46,7 @@ const Game = () => {
         { id: 39, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Rue_de_la_paix.png" },
       ];
       const [joueurs, setjoueurs] = useState ([
-        {id: 0, name: "Adrien", argent: 1500, piece: "👨‍💼", isTurn: 1, position:0, isJail:0},
+        {id: 0, name: "Adrien", argent: 1500, piece: "👨‍💼", isTurn: 1, position:2, isJail:0},
         {id: 1, name: "Mathéo", argent: 1500, piece: "🎩", isTurn:0, position:0, isJail:0},
       ]);
     const Endturn = () => {
@@ -60,14 +60,15 @@ const Game = () => {
         });
     };
     const pion = () => {
-        propriétés.map((p) => {
-            joueur.map((j) => {
-                if (j.position === p.id) {
-                    <span style={{postion: absolute, top: propriétés.top, left: propriétés.left}} > {j.piece}  </span>
-                };
-            });
-
-        });
+        return propriétés.flatMap((p) => (
+            joueurs.filter(j => j.position === p.id).map((j) => {
+                return (
+                    <span key={j.id} style={{position: "absolute", top: p.style.top, left: p.style.left}}> 
+                    {j.piece}  
+                    </span>
+                )  
+            })
+        ));
     };
     return (
             <div className="Plat0">
@@ -75,7 +76,7 @@ const Game = () => {
                     <source src="/OST_Maunopoly.mp3" type="audio/mpeg" />
                 </audio>
                 <img className="plateau" src="plateau.jpg"/>
-
+                {pion()}
                 {propriétés.map((p) => (
                     <div key={p.id} className="zone-propriétés" style={p.style} onClick={()=> setCarte_selec(p.img)} />
                 ))}
@@ -101,6 +102,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
