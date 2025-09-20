@@ -137,3 +137,18 @@
 .Endturn:hover {
   box-shadow: 0 0 15px white;
 }
+
+.Diceroll {
+  position: absolute;
+  top: 75vh;
+  left: 27%;
+  color: white;
+  background-color: darkgreen;
+  cursor: pointer;
+  font-weight: bold;
+  transition: box-shadow 0.2 ease;
+  border: none;
+}
+.Diceroll:hover {
+  box-shadow: 0 0 15px white;
+}
