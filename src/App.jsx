@@ -46,9 +46,10 @@ const Game = () => {
         { id: 39, name: "Rue de la Paix", style: { top: "78%", left: "87%", width: "12.7%", height: "8%" }, img: "/Propriétés/Rue_de_la_paix.png" },
       ];
       const [joueurs, setjoueurs] = useState ([
-        {id: 0, name: "Adrien", argent: 1500, piece: "👨‍💼", isTurn: 1, position:2, isJail:0},
+        {id: 0, name: "Adrien", argent: 1500, piece: "👨‍💼", isTurn: 1, position:0, isJail:0},
         {id: 1, name: "Mathéo", argent: 1500, piece: "🎩", isTurn:0, position:0, isJail:0},
       ]);
+      const [Resultdés, setResultdés]= useState(null); 
     const Endturn = () => {
         setjoueurs((joueur) => {
             const indexTurn = joueur.findIndex((j) => j.isTurn===1)
@@ -74,6 +75,7 @@ const Game = () => {
         const d1= Math.floor(Math.random()*6+1)
         const d2= Math.floor(Math.random()*6+1)
         const indexTurn = joueurs.findIndex((j) => j.isTurn===1)
+        
         setjoueurs(prev => prev.map((j,index) => {
             if (index === indexTurn) {
                 const newPos= (d1+d2+j.position) %propriétés.length;
@@ -82,9 +84,11 @@ const Game = () => {
             else {
                 return j;
             }
-    }));
+        }));
+        setResultdés([d1,d2]);
+        setTimeout(() => {setResultdés(null);}, 2000);
     }
-    
+
     return (
             <div className="Plat0">
                 <audio autoPlay loop>
@@ -113,11 +117,15 @@ const Game = () => {
                 <div className="Sidebar-droite">
                     <button className="Diceroll" onClick={(diceroll)}>Lancer les dés 🎲</button>
                     <button className="Endturn" onClick={Endturn} >Finir le tour</button>
+                    {Resultdés &&  (
+                        <div className="Resultatdés"> 🎲🎲 {Resultdés[0]} + {Resultdés[1]} = {Resultdés[0] + Resultdés[1]} </div>
+                    )}
                 </div>
             </div>
     );
 }
 export default Game;
+
 
 
 
