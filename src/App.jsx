@@ -79,15 +79,18 @@ const Game = () => {
         setjoueurs(prev => prev.map((j,index) => {
             if (index === indexTurn) {
                 const newPos= (d1+d2+j.position) %propriétés.length;
-                return {...j , position: newPos};
+                if (j.position > newPos) {
+                    const newMoney = (j.argent+200)
+                    return {...j,position: newPos, argent: newMoney}
+                }
+                else {
+                    return {...j , position: newPos};
+                }
             }
             else {
                 return j;
             }
         }));
-        setResultdés([d1,d2]);
-        setTimeout(() => {setResultdés(null);}, 2000);
-    }
 
     return (
             <div className="Plat0">
@@ -125,6 +128,7 @@ const Game = () => {
     );
 }
 export default Game;
+
 
 
 
